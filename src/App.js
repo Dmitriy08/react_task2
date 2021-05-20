@@ -58,7 +58,7 @@ const App = props => {
 			<Row>
 				<Col sm="6">
 					<h3>Todos in progress</h3>
-					<ListProgress filteredTodos={todos} todos={todos} fetching={fetching} loading={loading}/>
+					<ListProgress filteredTodos={filteredTodos} todos={todos} fetching={fetching} loading={loading}/>
 				</Col>
 				<Col sm="6">
 					<h3>Done</h3>
