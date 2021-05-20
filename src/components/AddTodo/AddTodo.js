@@ -1,10 +1,11 @@
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
-import React from "react";
+import React, {useState} from "react";
 import {addTodo} from "../../actions";
 import {useDispatch} from "react-redux";
 
-export default function AddTodo({newTodoName, setNewTodo}){
+export default function AddTodo(){
     const dispatch = useDispatch();
+    const [newTodoName, setNewTodo] = useState('');
     const addTodoHandler = (e) => {
         e.preventDefault();
         dispatch(addTodo(newTodoName))

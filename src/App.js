@@ -8,8 +8,6 @@ import ListProgress from "./components/ListProgress/ListProgress";
 import ListDone from "./components/ListDone/ListDone";
 
 const App = props => {
-
-	const [newTodoName, setNewTodo] = useState('');
 	const [searchKey, setSearchKey] = useState('');
 	const dispatch = useDispatch();
 	let todos = useSelector(state => state.todos);
@@ -53,14 +51,14 @@ const App = props => {
 			<h2>Todos</h2>
 			<Row>
 				<Col>
-					<AddTodo newTodoName={newTodoName} setNewTodo={setNewTodo}/>
+					<AddTodo />
 				</Col>
 			</Row>
 			<hr/>
 			<Row>
 				<Col sm="6">
 					<h3>Todos in progress</h3>
-					<ListProgress filteredTodos={filteredTodos} todos={todos} fetching={fetching} loading={loading}/>
+					<ListProgress filteredTodos={todos} todos={todos} fetching={fetching} loading={loading}/>
 				</Col>
 				<Col sm="6">
 					<h3>Done</h3>
