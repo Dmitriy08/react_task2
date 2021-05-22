@@ -21,7 +21,7 @@ const App = props => {
 				dispatch(setTodos(list))
 				dispatch(endLoad())
 			})
-	}, [])
+	},[])
 
 	const filteredTodos = useMemo(() => {
 		if(searchKey){
